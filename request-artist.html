@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request New Artist - VickTunez</title>
+    <link rel="stylesheet" href="water.css">
+</head>
+<body>
+    <header>
+        <h1>Request a New Artist</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <form id="request-artist-form">
+            <div>
+                <label for="artist-name">Artist's Name:</label>
+                <input type="text" id="artist-name" name="artistName" required>
+            </div>
+            <div>
+                <label for="genre">Music Genre:</label>
+                <input list="genres" id="genre" name="genre" required>
+                <datalist id="genres">
+                    <option value="Pop">
+                    <option value="Rock">
+                    <option value="Hip-Hop">
+                    <option value="Jazz">
+                    <option value="Classical">
+                    <option value="Electronic">
+                    <option value="Reggae">
+                    <option value="Country">
+                    <option value="Blues">
+                    <option value="R&B">
+                </datalist>
+            </div>
+            <div>
+                <label for="social-media-urls">Social Media URLs:</label>
+                <input type="url" id="social-media-urls" name="socialMediaUrls" multiple>
+            </div>
+            <div id="song-video-urls-container">
+                <label for="song-video-urls">Example Songs/Videos URLs:</label>
+                <input type="url" id="song-video-urls" name="songVideoUrls[]">
+                <button type="button" id="add-song-video-url">Add More</button>
+            </div>
+            <div>
+                <input type="checkbox" id="explicit-lyrics" name="explicitLyrics">
+                <label for="explicit-lyrics">Includes explicit lyrics</label>
+            </div>
+            <div>
+                <label for="description">Why should this artist be added?</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <script src="request-artist.js"></script>
+</body>
+</html>
